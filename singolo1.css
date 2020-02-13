@@ -133,11 +133,28 @@ section.slider > .images > img:nth-child(2) {
     margin-bottom: 1px;
 }
 
+
+
 section.services {
+    padding-top: 62px;
+
     background-color: #f2f2f2;
 }
 
 h1 {
     margin-block-start: 0;
     margin-block-end: 0;
+
+    font-size: 30px;
+
+    color: #666d89;
+}
+
+section.services > p {
+    margin-block-start: 23px;
+    margin-block-end: 0;
+
+    font: 18px/30px "Lato Light", "Arial", sans-serif;
+
+    color: #767e9e;
 }
