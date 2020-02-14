@@ -68,6 +68,7 @@ div.logo span {
 nav {
     margin-top: 9px;
     letter-spacing: -0.012em;
+    white-space: nowrap;
 }
 
 nav a {
@@ -92,7 +93,7 @@ nav a + a:before {
 }
 
 nav a:not(.current) {
-    margin-left: 2.19em;
+    margin-left: 2.26em;
 
     color: white;
 }
@@ -172,7 +173,7 @@ section.services p {
 section.services h1,
 section.services h2 {
     font-family: "Lato Black", "Arial", sans-serif;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.006em;
 
     color: #666d89;
 }
@@ -209,7 +210,6 @@ div.services-elements h2 {
     margin-block-end: 0;
     max-height: 65px;
     overflow: hidden;
-    letter-spacing: -0.015em;
 
     font-size: 12px;
     line-height: 1.84em;
