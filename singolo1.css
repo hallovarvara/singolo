@@ -137,6 +137,10 @@ section.slider > * {
     vertical-align: middle;
 }
 
+section.slider > h2 {
+    display: none;
+}
+
 section.slider > a {
     position: relative;
     padding: 150px 0;
