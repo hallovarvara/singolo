@@ -1,0 +1,13 @@
+<svg id="Google" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #666d89;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <image id="google_" data-name="google+" x="9.5" y="9.5" width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABIElEQVQokXWSsVHDQBREnz3OgQqgBJcgOoAKMIkUWeDkUnAoJXguu8imAqACuwNRgtwBHYhZ/M/cyPLO3Ein+//2765GXddRlPUl8AbM+McP8Bm8e2QAE/u0BdR8C9wAa9svT1sOGBdlnQFT4D14twvebQAt7JJBjIHMDi6Sgn2/uCjrrijr7ZER2Nn7zLQK1/Zsh9iEaE5j47Z2kUxaaXwzDZtMhn1HRsyUhTWqqQ3eLcygLJFz3P8xJjrE2th2k0YhjZomeCcSJqbrGXjouSjN++Dd64lAG/UDeDFtV8G7EXBv509JrTKV5gPyedXl86rRyOnK59VaZ/3vcUVzYgwpoouD0C8ne6cWyZdVRb2K5Gyj9CirO8tSENPynDEAv9e8eSVnQU5KAAAAAElFTkSuQmCC"/>
+  <circle id="Ellipse_2_copy" data-name="Ellipse 2 copy" class="cls-1" cx="16.5" cy="16.5" r="16"/>
+</svg>
