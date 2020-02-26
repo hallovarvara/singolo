@@ -1,13 +1,9 @@
-<svg id="Facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #666d89;
-        stroke-width: 1px;
-      }
-    </style>
-  </defs>
-  <image id="facebook-2" data-name="facebook" x="12.5" y="9.5" width="8" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAOCAYAAAASVl2WAAAAhklEQVQYlWP8//8/Awyk53UZMTAwTGNgYDCHicEVpOd1iTAwMNxiYGAQZEACLEjsWCTJNQwMDEcZ0BTII7FbZ04quwC2Ii230wAqWMrAwBAFZUcwMDDchJlwngETrICJMGFIoQGQAkMoXoYkB7ICLI7szQkMDAz5UAWGMEcSZcWAKmBgYAAAgPQeiyAvX5EAAAAASUVORK5CYII="/>
-  <circle class="cls-1" cx="16.5" cy="16.5" r="16"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon_facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7.77777778,2.43366667 L5.55566667,2.43366667 C5.29355556,2.43366667 5.00033333,2.779 5.00033333,3.24177778 L5.00033333,4.84633333 L7.77777778,4.84633333 L7.77777778,7.133 L5.00033333,7.133 L5.00033333,14 L2.37766667,14 L2.37766667,7.133 L0,7.133 L0,4.84633333 L2.37766667,4.84633333 L2.37766667,3.5 C2.37766667,1.56955556 3.717,0 5.55566667,0 L7.77777778,0 L7.77777778,2.43366667 Z" id="icon_facebook" fill="#666D89" fill-rule="nonzero"></path>
+    </g>
 </svg>

@@ -1,13 +1,9 @@
-<svg id="LinkedIn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #666d89;
-        stroke-width: 1px;
-      }
-    </style>
-  </defs>
-  <image id="linkedin-2" data-name="linkedin" x="9.5" y="9.5" width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAo0lEQVQokWNMy+08z8DAYMDAwPCAgYHBcOaksg8MRAAmqCYQUEBiEwQgjRegqj4gsQmD////M6TldjqAaFIwyI//kYx3hNL7oXQjAwMDPwMDQwGSmgkzJ5UVshBwUz4DA4MAmlhBel7XRyYMpahAAOr3BVAabiAhjSAQOHNSWSIDA0MikpgAQY0zJ5UdgDJRQpwYG2EGgBII6RrRwVDRyMDAAADTVkdOusmEvQAAAABJRU5ErkJggg=="/>
-  <circle id="Ellipse_2_copy_3" data-name="Ellipse 2 copy 3" class="cls-1" cx="16.5" cy="16.5" r="16"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon_linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.578555556,5.11957668 L3.57222222,5.11957668 L3.57222222,14.7484656 L0.578555556,14.7484656 L0.578555556,5.11957668 Z M3.67022222,2.4416878 C3.67022222,3.26846557 3.05966667,3.93813224 2.05555556,3.93813224 C1.11055556,3.93813224 0.5,3.26846557 0.5,2.4416878 C0.5,1.5946878 1.13,0.944465573 2.09444444,0.944465573 C3.05966667,0.944465573 3.65077778,1.5946878 3.67022222,2.4416878 Z M5.36266667,8.19102113 C5.36266667,6.99013224 5.32377778,5.98602113 5.28488889,5.11957668 L7.88344444,5.11957668 L8.02188889,6.45813224 L8.081,6.45813224 C8.47455556,5.82813224 9.439,4.90257668 11.0544444,4.90257668 C13.023,4.90257668 14.5,6.22246557 14.5,9.05746557 L14.5,14.7484656 L11.5071111,14.7484656 L11.5071111,9.41213224 C11.5071111,8.17157668 11.0738889,7.32535446 9.99044444,7.32535446 C9.16366667,7.32535446 8.67133333,7.89624335 8.45511111,8.44691002 C8.37577778,8.6436878 8.35633333,8.91979891 8.35633333,9.19591002 L8.35633333,14.7484656 L5.36266667,14.7484656 L5.36266667,8.19102113 Z" id="icon_linkedin" fill="#666D89" fill-rule="nonzero"></path>
+    </g>
 </svg>
