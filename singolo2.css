@@ -115,6 +115,7 @@ button:disabled {
 
 .icon.icon_twitter {
   background-image: url("assets/icon_twitter.svg");
+  background-position-x: 7px;
 }
 
 .icon.icon_linkedin {
@@ -144,7 +145,7 @@ button:disabled {
 }
 
 .portfolio__tags {
-  margin: 11px 0 19px;
+  margin: 10px 0 19px;
   padding-left: 1px;
 }
 
@@ -226,13 +227,21 @@ button:disabled {
 }
 
 .about-us__employee h3 {
-  margin-top: 12px;
+  margin-top: 13px;
 
   letter-spacing: -0.005em;
   line-height: 1.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.about-us .about-us__employee p {
+  margin-top: 8px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.75em;
 }
 
 .about-us__employee:nth-child(2) h3 {
@@ -251,14 +260,6 @@ button:disabled {
 
 .about-us__employee:nth-child(3) p {
   letter-spacing: -0.003em;
-}
-
-.about-us .about-us__employee p {
-  margin-top: 8px;
-
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.75em;
 }
 
 .about-us__employee:nth-child(2) p {
