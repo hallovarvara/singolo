@@ -568,6 +568,10 @@ textarea {
   max-height: 202px;
 }
 
+input:focus:invalid {
+  filter: saturate(1.5);
+}
+
 form button {
   padding: 12px 14px 10px;
 
