@@ -491,7 +491,7 @@ button:disabled {
 }
 
 .social li:not(:first-child) {
-  margin-left: 4px;
+  margin-left: 0.26em;
 }
 
 .social__link {
@@ -970,7 +970,7 @@ form button:hover {
   font-weight: normal;
   font-size: 12px;
   letter-spacing: -0.004em;
-  line-height: 1.9em;
+  line-height: 1.85em;
   text-align: justify;
   hyphens: manual;
 }
