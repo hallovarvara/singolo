@@ -30,7 +30,8 @@ h1 {
   color: white;
 }
 
-h1 span {
+h1::after {
+  content: "*";
   color: var(--primary);
 }
 
@@ -667,17 +668,21 @@ footer .wrapper {
 
 footer .copyright {
   margin-top: -4px;
+  margin-left: 2px;
 
   font-weight: 300;
   font-size: 12px;
-  word-spacing: -0.06em;
-  letter-spacing: -0.001em;
+  word-spacing: -0.08em;
+  letter-spacing: -0.003em;
 }
 
 footer .social-icons {
   margin: 0;
 }
 
+footer .social-icons .icon:last-child {
+  margin-left: 3px;
+}
 
 
 .visually-hidden {
