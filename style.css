@@ -1,3 +1,359 @@
+* {
+  box-sizing: border-box;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+
 body {
   --primary: #f06c64;
   --dark-background: #2d303a;
@@ -54,7 +410,7 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 
-  margin-top: 18px;
+  margin-top: 19px;
 
   font-weight: 300;
   font-size: 18px;
@@ -91,6 +447,10 @@ footer {
   flex-wrap: wrap;
 }
 
+.layout-3-column > div {
+  width: 300px;
+}
+
 .layout-3-column p {
   margin-top: 12px;
 
@@ -125,16 +485,20 @@ button:disabled {
 
 
 
-.social-icons {
+.social {
   margin-top: 24px;
   padding-left: 1px;
 }
 
-.social-icons .icon {
+.social li:not(:first-child) {
+  margin-left: 4px;
+}
+
+.social__link {
   display: inline-block;
 
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -142,31 +506,31 @@ button:disabled {
   border-radius: 50%;
 }
 
-.social-icons .icon:not(:first-child) {
+.social__link:not(:first-child) {
   margin-left: 4px;
 }
 
-.social-icons .icon:hover,
-.contact-form__info .phone:hover,
-.contact-form__info .email:hover {
+.social__link:hover,
+.contact-form__phone:hover,
+.contact-form__email:hover {
   opacity: 0.6;
 }
 
-.icon.icon_facebook {
+.social__link--facebook {
   background-image: url("assets/icon_facebook.svg");
 }
 
-.icon.icon_google-plus {
+.social__link--google-plus {
   background-image: url("assets/icon_google-plus.svg");
   background-position-x: 7px;
 }
 
-.icon.icon_twitter {
+.social__link--twitter {
   background-image: url("assets/icon_twitter.svg");
   background-position-x: 8px;
 }
 
-.icon.icon_linkedin {
+.social__link--linkedin {
   background-image: url("assets/icon_linkedin.svg");
   background-position-y: 7px;
 }
@@ -174,12 +538,12 @@ button:disabled {
 
 
 header {
-  padding-top: 29px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 31px;
 
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.042em;
+  letter-spacing: -0.037em;
 
   background-color: var(--dark-background);
   border-bottom: 6px solid #323746;
@@ -200,7 +564,8 @@ nav ul {
   margin: 0;
 }
 
-nav ul li {
+nav ul li,
+.social li {
   display: inline-block;
   
   list-style-type: none;
@@ -296,15 +661,11 @@ nav a:not(.current):hover {
 
 
 .services {
-  padding-top: 59px;
+  padding-top: 60px;
   padding-bottom: 30px;
 
   background-color: var(--light-background);
   border-bottom: 6px solid white;
-}
-
-.services h2 {
-  letter-spacing: 0.001em;
 }
 
 .services .layout-3-column {
@@ -388,7 +749,7 @@ nav a:not(.current):hover {
 }
 
 .portfolio__tags {
-  margin: 9px 0 19px;
+  margin: 11px 0 19px;
   padding-left: 1px;
 }
 
@@ -440,8 +801,8 @@ nav a:not(.current):hover {
 
 
 .about-us {
-  padding-top: 59px;
-  padding-bottom: 64px;
+  padding-top: 60px;
+  padding-bottom: 48px;
 
   background-color: var(--light-background);
   border-bottom: 6px solid white;
@@ -453,10 +814,6 @@ nav a:not(.current):hover {
 
 .about-us .layout-3-column {
   margin-top: 45px;
-}
-
-.about-us__employee {
-  width: 300px;
 }
 
 .about-us__employee:nth-child(2) {
@@ -490,7 +847,7 @@ nav a:not(.current):hover {
 
 .about-us__employee:nth-child(3) h3,
 .about-us__employee:nth-child(3) p,
-.about-us__employee:nth-child(3) .social-icons {
+.about-us__employee:nth-child(3) .social {
   margin-left: -1px;
 }
 
@@ -509,7 +866,7 @@ nav a:not(.current):hover {
 
 
 .contacts {
-  padding-top: 59px;
+  padding-top: 60px;
   padding-bottom: 13px;
 
   color: var(--pink-xxl);
@@ -602,8 +959,10 @@ form button:hover {
   letter-spacing: 0.004em;
 }
 
-.contact-form__info > p,
-.contact-form__info > a {
+.contact-form__text,
+.contact-form__address,
+.contact-form__phone,
+.contact-form__email {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 12px;
@@ -611,17 +970,22 @@ form button:hover {
   font-weight: normal;
   font-size: 12px;
   letter-spacing: -0.004em;
-  line-height: 22px;
+  line-height: 1.9em;
   text-align: justify;
   hyphens: manual;
 }
 
-.contact-form__info .address,
-.contact-form__info > a {
+.contact-form__address,
+.contact-form__phone,
+.contact-form__email {
   padding-left: 23px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
 }
 
-.contact-form__info > a {
+.contact-form__phone,
+.contact-form__email {
   display: block;
   margin-block-start: 0;
 
@@ -629,27 +993,32 @@ form button:hover {
   text-decoration: none;
 }
 
-.contact-form__info .address {
-  margin-block-start: 0;
+.contact-form__address {
   margin-top: 21px;
 
   letter-spacing: -0.013em;
 
-  background: transparent url("assets/icon-location.svg") no-repeat 3px center;
+  background-image: url("assets/icon-location.svg");
+  background-position-x: 3px;
+  background-position-y: center;
 }
 
-.contact-form__info .phone {
+.contact-form__phone {
   margin-top: -0.08em;
 
   letter-spacing: -0.016em;
 
-  background: transparent url("assets/icon-phone.svg") no-repeat left center;
+  background-image: url("assets/icon-phone.svg");
+  background-position-x: left;
+  background-position-y: center;
 }
 
-.contact-form__info .email {
+.contact-form__email {
   letter-spacing: -0.002em;
 
-  background: transparent url("assets/icon-email.svg") no-repeat left 7px;
+  background-image: url("assets/icon-email.svg");
+  background-position-x: left;
+  background-position-y: 7px;
 }
 
 
@@ -666,7 +1035,7 @@ footer .wrapper {
   align-items: center;
 }
 
-footer .copyright {
+.footer__copyright {
   margin-top: -4px;
   margin-left: 2px;
 
@@ -676,14 +1045,9 @@ footer .copyright {
   letter-spacing: -0.003em;
 }
 
-footer .social-icons {
+.footer__social {
   margin: 0;
 }
-
-footer .social-icons .icon:last-child {
-  margin-left: 3px;
-}
-
 
 .visually-hidden {
   position: absolute;
