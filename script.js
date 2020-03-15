@@ -1,3 +1,5 @@
+/* MENU */
+
 const menu = document.querySelector("nav ul");
 
 menu.addEventListener("click", (event) => {
@@ -11,6 +13,35 @@ menu.addEventListener("click", (event) => {
     behavior: 'smooth'
   });
 });
+
+
+
+/* PORTFOLIO */
+
+const tags = document.querySelector(".portfolio__tags");
+const portfolio = document.querySelector(".portfolio__pictures");
+
+// Shift portfolio pictures by clicking on tag
+tags.addEventListener("click", (event) => {
+  tags.querySelectorAll("button").forEach(e => e.classList.remove('selected'));
+  event.target.classList.add("selected");
+
+  let portfolioPictures = [...portfolio.querySelectorAll(".portfolio__picture")];
+
+  portfolioPictures.unshift(portfolioPictures.pop());
+
+  portfolioPictures.forEach( pic => {
+    portfolio.append(pic);
+  });
+});
+
+// Make clicked portfolio picture bordered
+portfolio.addEventListener("click", (event) => {
+  portfolio.querySelectorAll("img").forEach(pic => pic.classList.remove("bordered"));
+  event.target.classList.add("bordered");
+});
+
+
 
 /* MODAL WINDOW */
 

@@ -351,21 +351,21 @@ button:disabled {
 }
 
 .social__link--facebook {
-  background-image: url("assets/icon_facebook.svg");
+  background-image: url("./assets/icon_facebook.svg");
 }
 
 .social__link--google-plus {
-  background-image: url("assets/icon_google-plus.svg");
+  background-image: url("./assets/icon_google-plus.svg");
   background-position-x: 7px;
 }
 
 .social__link--twitter {
-  background-image: url("assets/icon_twitter.svg");
+  background-image: url("./assets/icon_twitter.svg");
   background-position-x: 8px;
 }
 
 .social__link--linkedin {
-  background-image: url("assets/icon_linkedin.svg");
+  background-image: url("./assets/icon_linkedin.svg");
   background-position-y: 7px;
 }
 
@@ -474,7 +474,7 @@ nav a.current {
   height: 27px;
   padding: 150px 0;
 
-  background: transparent url("assets/arrow.svg") no-repeat center center;
+  background: transparent url("./assets/arrow.svg") no-repeat center center;
 }
 
 .arrow.left {
@@ -526,27 +526,27 @@ nav a.current {
 }
 
 .service.custom-design {
-  background-image: url("assets/icon-custom-design.svg");
+  background-image: url("./assets/icon-custom-design.svg");
 }
 
 .service.innovative-ideas {
-  background-image: url("assets/icon-inovative-ideas.svg");
+  background-image: url("./assets/icon-inovative-ideas.svg");
 }
 
 .service.love-is-the-answer {
-  background-image: url("assets/icon-love-is-the-answer.svg");
+  background-image: url("./assets/icon-love-is-the-answer.svg");
 }
 
 .service.responsive-layout {
-  background-image: url("assets/icon-responsive-layout.svg");
+  background-image: url("./assets/icon-responsive-layout.svg");
 }
 
 .service.support-24-7 {
-  background-image: url("assets/icon-24-7-support.svg");
+  background-image: url("./assets/icon-24-7-support.svg");
 }
 
 .service.feel-like-a-star {
-  background-image: url("assets/icon-feel-like-a-star.svg");
+  background-image: url("./assets/icon-feel-like-a-star.svg");
   background-position-x: -1px;
 }
 
@@ -618,20 +618,29 @@ nav a.current {
   border-color: var(--light);
 }
 
-.portfolio__tags .tag.selected {
+.portfolio__tags .tag.selected,
+.portfolio__tags .tag:active {
   color: var(--light);
   border-color: var(--light);
 
   cursor: default;
+  outline: none;
 }
 
-.portfolio .layout-4-column {
+.portfolio__pictures {
   height: 601px;
   overflow: hidden;
 }
 
 .portfolio__picture {
   margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+.bordered {
+  border: 5px solid #F06C64;
+  cursor: default;
 }
 
 .portfolio__picture:nth-child(n+9) {
@@ -904,7 +913,7 @@ form button:hover {
 
   letter-spacing: -0.013em;
 
-  background-image: url("assets/icon-location.svg");
+  background-image: url("./assets/icon-location.svg");
   background-position-x: 3px;
   background-position-y: center;
 }
@@ -914,7 +923,7 @@ form button:hover {
 
   letter-spacing: -0.016em;
 
-  background-image: url("assets/icon-phone.svg");
+  background-image: url("./assets/icon-phone.svg");
   background-position-x: left;
   background-position-y: center;
 }
@@ -922,7 +931,7 @@ form button:hover {
 .contact-form__email {
   letter-spacing: -0.002em;
 
-  background-image: url("assets/icon-email.svg");
+  background-image: url("./assets/icon-email.svg");
   background-position-x: left;
   background-position-y: 7px;
 }
