@@ -8,22 +8,29 @@
     <title>Singolo</title>
 </head>
 <body>
+  <div class="modal hidden">
+    <div class="modal__message">
+      Test
+    </div>
+    <div class="modal__background"></div>
+  </div>
+
   <header>
     <div class="wrapper">
       <h1>Singolo</h1>
       <nav>
         <ul>
           <li><a class="current">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a>Services</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="slider">
+  <section class="slider home">
     <div class="wrapper">
       <h2 class="visually-hidden">Image Gallery</h2>
    
@@ -108,14 +115,14 @@
     </div>
   </section>
 
-  <section class="about-us">
+  <section class="about">
     <div class="wrapper">
       <h2>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       
       <div class="layout-3-column">
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/adam-jensen.jpg" alt="Adam Jensen photo" width="300" height="300">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="assets/employees/adam-jensen.jpg" alt="Adam Jensen photo" width="300" height="300">
           <h3>Adam Jensen</h3>
           <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
           <ul class="social">
@@ -126,8 +133,8 @@
           </ul>
         </div>
 
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/desmond-miles.jpg" alt="Desmond Miles photo" width="300" height="300">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="assets/employees/desmond-miles.jpg" alt="Desmond Miles photo" width="300" height="300">
           <h3>Desmond Miles</h3>
           <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
           <ul class="social">
@@ -138,8 +145,8 @@
           </ul>
         </div>
 
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/scolara-visari.jpg" alt="Scolara Visari photo" width="300" height="300">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="assets/employees/scolara-visari.jpg" alt="Scolara Visari photo" width="300" height="300">
           <h3>Scolara Visari</h3>
           <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
           <ul class="social">
@@ -154,7 +161,7 @@
     </div>
   </section>
 
-  <section class="contacts">
+  <section class="contact">
     <div class="wrapper">
       <h2>Get a Quote</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -188,5 +195,7 @@
       </ul>
     </div>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
