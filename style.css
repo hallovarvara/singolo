@@ -311,7 +311,7 @@ button {
 button:not(:disabled):hover,
 button:not(:disabled):focus {
   outline: none;
-  filter: saturate(1.25);
+  opacity: 0.4;
 }
 
 button:disabled {
@@ -340,6 +340,7 @@ button:disabled {
   background-position: center center;
   border: 1px solid var(--secondary);
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
 .social__link:not(:first-child) {
@@ -417,6 +418,7 @@ nav a {
   text-decoration: none;
 
   color: var(--primary);
+  transition: all 0.3s ease-in-out;
 }
 
 nav li:not(:first-child) a {
@@ -456,6 +458,8 @@ nav a.current {
 
   background-color: var(--primary);
   border-bottom: 6px solid #ea676b;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-red {
@@ -476,6 +480,7 @@ nav a.current {
 
 .iphone {
   position: relative;
+  left: -61px;
 
   width: 240px;
   height: 483px;
@@ -508,6 +513,7 @@ nav a.current {
   height: 458px;
 
   background: url("./assets/slider-images/1-phone.svg") no-repeat;
+  cursor: pointer;
 }
 
 .iphone__shadow {
@@ -524,19 +530,27 @@ nav a.current {
 
 .iphone_vertical {
   z-index: 401;
-  left: -61px;
 }
 
 .iphone_horizontal {
   z-index: 400;
-  left: -86px;
   top: -1px;
 
   transform: rotate(90deg);
 }
 
 .iphone_horizontal .iphone__screen {
+  top: 90px;
   background-image: url("./assets/slider-images/1-phone-horizontal-screen.png");
+}
+
+.iphone_horizontal .iphone__phone {
+  bottom: 0;
+  top: auto;
+}
+
+.iphone_horizontal .iphone__shadow {
+  transform: scale(-1,1);
 }
 
 
@@ -549,7 +563,8 @@ nav a.current {
   padding: 150px 0;
 
   background: transparent url("./assets/arrow.svg") no-repeat center center;
-  opacity: 0.2
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
 }
 
 .arrow.left {
@@ -565,10 +580,13 @@ nav a.current {
   padding: 0 35px;
   width: 100%;
   min-height: 600px;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  transition: all 1s ease;
 }
 
 
@@ -676,6 +694,7 @@ nav a.current {
   color: var(--secondary);
   border: 1px solid var(--secondary);
   border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio__tags .tag:not(:first-child) {
@@ -685,6 +704,7 @@ nav a.current {
 .portfolio__tags .tag:hover {
   color: var(--light);
   border-color: var(--light);
+  opacity: 1;
 }
 
 .portfolio__tags .tag.selected,
@@ -694,6 +714,7 @@ nav a.current {
 
   cursor: default;
   outline: none;
+  opacity: 1;
 }
 
 .portfolio__pictures {
@@ -705,6 +726,7 @@ nav a.current {
   margin-bottom: 20px;
 
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .bordered {
@@ -814,6 +836,8 @@ form > * {
   display: block;
 }
 
+
+
 .modal {
   position: absolute;
   top: 0;
@@ -869,11 +893,13 @@ form > * {
   color: var(--primary);
   border-radius: 5px;
   border: 2px solid var(--primary);
+  transition: all 0.3s ease-in-out;
 }
 
-.modal__close-button:hover {
+.modal__close-button:not(:disabled):hover {
   color: white;
   background: var(--primary);
+  opacity: 1;
 }
 
 input,
@@ -920,15 +946,14 @@ form button {
 
   background-color: transparent;
   color: var(--pink-xxl);
-  border: 1px solid var(--pink-xxl); 
+  border: 1px solid var(--pink-xxl);
+  transition: all 0.3s ease-in-out;
 }
 
 form button:hover {
-  padding: 13px 15px 11px;
-
   background-color: var(--pink-xxl);
   color: var(--primary);
-  border: none;
+  border-color: var(--pink-xxl);
 }
 
 .contact-form__info {

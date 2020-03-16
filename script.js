@@ -24,13 +24,13 @@ const arrow = document.querySelectorAll(".slider .arrow");
 
 const slides = {
   0: [`<div class="iphone iphone_vertical">
-        <div class="iphone__screen"></div>
-        <div class="iphone__phone"></div>
+        <div class="iphone__screen iphone__clickable"></div>
+        <div class="iphone__phone iphone__clickable"></div>
         <div class="iphone__shadow"></div>
        </div>`,
       `<div class="iphone iphone_horizontal">
-        <div class="iphone__screen"></div>
-        <div class="iphone__phone"></div>
+        <div class="iphone__screen iphone__clickable"></div>
+        <div class="iphone__phone iphone__clickable"></div>
         <div class="iphone__shadow"></div>
        </div>`],
   1: [`<img width="517" height="513" src="./assets/slider-images/2-iphones.png" alt="iPhone Vertical">`]
@@ -44,14 +44,15 @@ const slideColor = {
 
 // Phone screens switching off / on
 function phoneScreensActivate() {
-  const phones = document.querySelectorAll(".slider .iphone__screen");
-  phones.forEach( phone => phone.addEventListener( "click", event => {
-    if ( event.target.classList.contains("hidden") ) {
-      event.target.classList.remove("hidden");
-    } else {
-      event.target.classList.add("hidden");
-    }
-  }));
+  const phones = document.querySelectorAll(".slider .iphone");
+  phones.forEach( phone => phone.querySelectorAll(".iphone__clickable").forEach( 
+    element => element.addEventListener( "click", event => {
+      let screen = phone.querySelector(".iphone__screen");
+      (screen.classList.contains("hidden")) ?
+        screen.classList.remove("hidden") :
+        screen.classList.add("hidden");
+    })
+  ));
 }
 phoneScreensActivate();
 
@@ -72,7 +73,6 @@ arrow.forEach( each => each.addEventListener("click", event => {
   } else {
     sliderBackground.classList.add( slideColor["default"] );
   }
-
   slideContainer.innerHTML = "";
   slides[currentSlide].forEach( img => slideContainer.innerHTML += `\n${img}`);
 
