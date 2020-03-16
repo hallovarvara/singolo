@@ -1,18 +1,12 @@
 /* MENU */
 
 const menu = document.querySelector("nav ul");
+const menuLink = document.querySelectorAll("nav ul li a");
 
-menu.addEventListener("click", (event) => {
-  menu.querySelectorAll('li a').forEach(e => e.classList.remove('current'));
+menuLink.forEach( link => link.addEventListener("click", (event) => {
+  menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
   event.target.classList.add("current");
-
-  let classForScroll = event.target.innerHTML.toLowerCase()+"";
-
-  window.scrollTo({
-    top: document.querySelector(`.${classForScroll}`).offsetTop - 89,
-    behavior: 'smooth'
-  });
-});
+}));
 
 
 
