@@ -526,6 +526,7 @@ nav a.current {
 
   background: url("./assets/slider-images/1-phone.svg") no-repeat;
   cursor: pointer;
+  border-radius: 1.76em;
 }
 
 .iphone__shadow {
@@ -574,7 +575,7 @@ nav a.current {
   height: 27px;
   padding: 150px 0;
 
-  background: transparent url("./assets/arrow.svg") no-repeat center center;
+  background: transparent url("./assets/icon-arrow.svg") no-repeat center center;
   opacity: 0.2;
   transition: all 0.3s ease-in-out;
 }
@@ -741,8 +742,16 @@ nav a.current {
   transition: all 0.3s ease-in-out;
 }
 
+.portfolio__picture:hover {
+  opacity: 0.5;
+}
+
 .bordered {
   border: 5px solid #F06C64;
+}
+
+.bordered:hover {
+  opacity: 1;
 }
 
 .portfolio__picture:nth-child(n+9) {

@@ -76,24 +76,25 @@ arrow.forEach( each => each.addEventListener("click", event => {
 
 /* PORTFOLIO */
 
-const tags = document.querySelector(".portfolio__tags");
+const tags = document.querySelectorAll(".portfolio__tags button");
 const portfolio = document.querySelector(".portfolio__pictures");
 
 // Shift portfolio pictures by clicking on tag
-tags.addEventListener("click", (event) => {
+tags.forEach(tag => tag.addEventListener("click", (event) => {
   // Prevent selected tag from click action
   if( !event.target.classList.contains("selected") ) {
     let portfolioPictures = [...portfolio.querySelectorAll(".portfolio__picture")];
     portfolioPictures.unshift(portfolioPictures.pop());
     portfolioPictures.forEach( pic => portfolio.append(pic) );
   }
-  tags.querySelectorAll("button").forEach(e => e.classList.remove('selected'));
+  tags.forEach(t => t.classList.remove('selected'));
   event.target.classList.add("selected");
-});
+}));
 
 // Make clicked portfolio picture bordered
 let switchNow = true;
-portfolio.addEventListener("click", (event) => {
+const portfolioPic = portfolio.querySelectorAll(".portfolio__picture");
+portfolioPic.forEach(image => image.addEventListener("click", (event) => {
   if ( event.target.classList.contains("bordered") ) {
     switchNow = false;
   }
@@ -105,7 +106,7 @@ portfolio.addEventListener("click", (event) => {
   }
 
   switchNow = true;
-});
+}));
 
 
 
