@@ -114,7 +114,7 @@ function changeSlideBackground(){
 }
 
 arrow.forEach( each => each.addEventListener("click", event => {
-  if ( event.target.classList.contains("left") ) {
+  if ( event.target.classList.contains("right") ) {
     hideSlide("to-right");
     currentSlide = (--currentSlide + slidesNumber) % slidesNumber;
     changeSlideBackground();
@@ -181,10 +181,10 @@ function addCloseButton(node){
 }
 
 //Get value from form field
-function addNodeValue (node, fieldName, defaultValue = "Не заполнено", br) {
+function addNodeValue (node, defaultValue = "Не заполнено") {
   let value = document.querySelector(node).value;
   value = (value == "") ? defaultValue : value;
-  return `<p>${fieldName}: ${value}</p>`;
+  return value;
 }
 
 //Show modal window
@@ -206,16 +206,15 @@ button.addEventListener("click", (event) => {
   //Check if all required fields filled with valid data
   if ( requiredFields.every(isValid) ) {
     event.preventDefault();
-    let message = "<p>Письмо отправлено</p>";
 
-    message += addNodeValue("input[name='subject']",
-                            "Тема",
-                            "Без темы");
-
-    message += addNodeValue("textarea[name='message']",
-                            "Описание",
-                            "Без описания");
-    modalMessage.innerHTML = message;
+    modalMessage.innerHTML = "";
+    let title = document.createElement("p");
+    title.innerText = "Письмо отправлено";
+    let subject = document.createElement("p");
+    subject.innerText = "Тема: " + addNodeValue("input[name='subject']", "Без темы");
+    let description = document.createElement("p");
+    description.innerText = "Описание: " + addNodeValue("textarea[name='message']", "Без Описания");
+    modalMessage.append(title, subject, description);
     addCloseButton(modalMessage);
     showModal();
   }
