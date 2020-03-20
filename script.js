@@ -33,28 +33,44 @@ function changeMenuActiveLink(event) {
 
 /* SLIDER */
 
-const sliderBackground = document.querySelector(".slider");
-const slideContainer = document.querySelector(".slider__images");
-const arrow = document.querySelectorAll(".slider .arrow");
-
 const slides = {
-  0: [`<div class="iphone iphone_vertical">
+  0: `<div class="iphone iphone_vertical">
+        <div class="iphone__screen iphone__clickable"></div>
+        <div class="iphone__phone iphone__clickable"></div>
+        <div class="iphone__shadow"></div>
+       </div>
+      <div class="iphone iphone_horizontal">
         <div class="iphone__screen iphone__clickable"></div>
         <div class="iphone__phone iphone__clickable"></div>
         <div class="iphone__shadow"></div>
        </div>`,
-      `<div class="iphone iphone_horizontal">
-        <div class="iphone__screen iphone__clickable"></div>
-        <div class="iphone__phone iphone__clickable"></div>
-        <div class="iphone__shadow"></div>
-       </div>`],
-  1: [`<img width="517" height="513" src="./assets/slider-images/2-iphones.png" alt="iPhone Vertical">`]
+  1: `<img width="517" height="513" src="./assets/slider-images/2-iphones.png" alt="iPhone Vertical">`
 };
 
 const slideColor = {
   0: "bg-red",
   1: "bg-blue",
   "default": "bg-red"
+}
+
+const sliderBackground = document.querySelector(".slider");
+let slidesContainer = document.querySelector(".slider__images");
+const arrow = document.querySelectorAll(".slider .arrow");
+let currentSlide = 0;
+let slidesNumber = Object.keys(slides).length;
+
+// Init slider
+initSlider(currentSlide);
+function initSlider(currentSlide) {
+  slidesContainer.innerHTML = "";
+  for (let i = 0; i < slidesNumber; i++) {
+    let slide = document.createElement("div");
+    slide.innerHTML = slides[i];
+    slide.classList = "slide";
+    if (i == currentSlide) slide.classList.add("active");
+    slidesContainer.append(slide);
+  }
+  phoneScreensActivate();
 }
 
 // Phone screens switching off / on
@@ -69,30 +85,48 @@ function phoneScreensActivate() {
     })
   ));
 }
-phoneScreensActivate();
 
-let currentSlide = 0;
-arrow.forEach( each => each.addEventListener("click", event => {
-  ( event.target.classList.contains("left") ) ? currentSlide-- : currentSlide++;
+// Slider actions
+let slidesList = slidesContainer.querySelectorAll(".slide");
 
-  if (currentSlide == Object.keys(slides).length) {
-    currentSlide = 0;
-  } else if (currentSlide < 0) {
-    currentSlide = Object.keys(slides).length-1;
-  }
+function hideSlide(direction) {
+  slidesList[currentSlide].classList.add(direction);
+  slidesList[currentSlide].addEventListener("animationend", function(){
+    this.classList.remove("active", direction);
+  });
+}
 
-  sliderBackground.classList.value = "slider home";
+function showSlide(direction) {
+  slidesList[currentSlide].classList.add("next", direction);
+  slidesList[currentSlide].addEventListener("animationend", function(){
+    this.classList.remove("next", direction);
+    this.classList.add("active");
+  });
+}
 
+function changeSlideBackground(){
+  sliderBackground.classList.value = "slider";
   if(slideColor.hasOwnProperty(currentSlide)) {
     sliderBackground.classList.add(slideColor[currentSlide]);
   } else {
     sliderBackground.classList.add( slideColor["default"] );
   }
-  slideContainer.innerHTML = "";
-  slides[currentSlide].forEach( img => slideContainer.innerHTML += `\n${img}`);
+}
 
-  phoneScreensActivate();
+arrow.forEach( each => each.addEventListener("click", event => {
+  if ( event.target.classList.contains("left") ) {
+    hideSlide("to-right");
+    currentSlide = (--currentSlide + slidesNumber) % slidesNumber;
+    changeSlideBackground();
+    showSlide("from-left");
+  } else {
+    hideSlide("to-left");
+    currentSlide = (++currentSlide + slidesNumber) % slidesNumber;
+    changeSlideBackground();
+    showSlide("from-right");
+  }
 }));
+
 
 
 /* PORTFOLIO */
