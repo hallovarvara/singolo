@@ -270,14 +270,12 @@ footer {
   width: 100%;
 }
 
-#services,
-#portfolio,
-#about,
-#contact {
-  position: absolute;
-  top: -89px;
-  width: 89px;
-  height: 89px;
+.slider,
+.services,
+.portfolio,
+.about,
+.contact { 
+  scroll-margin-top: 89px;
 }
 
 .wrapper {
@@ -388,6 +386,7 @@ button:disabled {
 
 header {
   position: fixed;
+  top: 0;
   z-index: 9999;
 
   padding-top: 30px;
@@ -430,7 +429,6 @@ nav a {
   text-decoration: none;
 
   color: var(--primary);
-  transition: all 0.3s ease-in-out;
 }
 
 nav li:not(:first-child) a {
@@ -465,7 +463,6 @@ nav a.current {
 
 .slider {
   padding-top: 89px;
-
   min-height: 594px;
 
   background-color: var(--primary);

@@ -1,12 +1,33 @@
 /* MENU */
 
 const menu = document.querySelector("nav ul");
-const menuLink = document.querySelectorAll("nav ul li a");
+const menuLinks = document.querySelectorAll("nav ul li a");
 
-menuLink.forEach( link => link.addEventListener("click", (event) => {
+menuLinks.forEach( link => link.addEventListener("click", (event) => {
   menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
   event.target.classList.add("current");
 }));
+
+document.addEventListener("scroll", changeMenuActiveLink);
+window.onload = changeMenuActiveLink();
+
+function changeMenuActiveLink(event) {
+  const currentPositionY = window.scrollY;
+  const tagsWithId = document.querySelectorAll('[id]');
+
+  tagsWithId.forEach( tag => {
+    if (tag.offsetTop - 89 <= currentPositionY &&
+       (tag.offsetTop + tag.offsetHeight - 89) > currentPositionY) {
+      menuLinks.forEach( link => {
+        link.classList.remove("current");
+        if(tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
+          link.classList.add("current");
+        }
+      });
+    }
+  });
+  
+}
 
 
 
@@ -140,6 +161,7 @@ function showModal () {
 //Hide modal window
 function hideModal () {
   modal.classList.add("hidden");
+  document.forms[0].reset();
 }
 
 //Create content of modal window
