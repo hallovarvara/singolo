@@ -318,15 +318,18 @@ button {
   border: none;
 }
 
-button:not(:disabled):hover,
-button:not(:disabled):focus {
+button:not(:disabled):hover {
   outline: none;
   opacity: 0.6;
 }
 
 button:disabled {
-  opacity: 0.7;
+  opacity: 0.4;
   cursor: default;
+}
+
+button:focus {
+  outline: none;
 }
 
 
