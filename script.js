@@ -1,27 +1,34 @@
 /* MENU */
 
-const menu = document.querySelector("nav ul");
 const menuLinks = document.querySelectorAll("nav ul li a");
-
-menuLinks.forEach( link => link.addEventListener("click", (event) => {
-  menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
-  event.target.classList.add("current");
-}));
 
 document.addEventListener("scroll", changeMenuActiveLink);
 window.onload = changeMenuActiveLink();
 
 function changeMenuActiveLink(event) {
+  const pageHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+  );
+  const clientScreenHeight = document.documentElement.clientHeight;
+  const clientTopPosition = window.pageYOffset;
+  const clientBottomPosition = clientScreenHeight + clientTopPosition;
+
   const currentPositionY = window.scrollY;
   const tagsWithId = document.querySelectorAll('[id]');
 
   tagsWithId.forEach( tag => {
-    if (tag.offsetTop - 89 <= currentPositionY &&
-       (tag.offsetTop + tag.offsetHeight - 89) > currentPositionY) {
+    if (tag.offsetTop - 90 <= currentPositionY &&
+       (tag.offsetTop + tag.offsetHeight - 90) > currentPositionY) {
       menuLinks.forEach( link => {
         link.classList.remove("current");
-        if(tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
-          link.classList.add("current");
+        if(clientBottomPosition + 10 >= pageHeight) {
+          menuLinks[menuLinks.length - 1].classList.add("current");
+        } else {
+          if (tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
+            link.classList.add("current");
+          } 
         }
       });
     }
