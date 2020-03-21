@@ -28,7 +28,7 @@ function changeMenuActiveLink(event) {
         } else {
           if (tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
             link.classList.add("current");
-          } 
+          }
         }
       });
     }
