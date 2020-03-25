@@ -121,7 +121,7 @@ function changeSlideBackground(){
 }
 
 arrow.forEach( each => each.addEventListener("click", event => {
-  if ( event.target.classList.contains("right") ) {
+  if ( event.target.classList.contains("left") ) {
     hideSlide("to-right");
     currentSlide = (--currentSlide + slidesNumber) % slidesNumber;
     changeSlideBackground();
