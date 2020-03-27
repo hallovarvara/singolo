@@ -36,6 +36,59 @@ function changeMenuActiveLink(event) {
   
 }
 
+const burger = document.querySelector(".header__burger");
+const header = document.querySelector("header");
+const h1 = document.querySelector("h1");
+const nav = header.querySelector("nav");
+let menuOpened = false;
+darkenContent(header);
+const headerBackground = header.querySelector(".dark-background");
+hideDarkBackground();
+
+function drawMenu() {
+  if (document.documentElement.clientWidth >= 768) {
+    menuOpened = true;
+  }
+  if(menuOpened) {
+    hideDarkBackground();
+    burger.classList.remove("rotated90");
+    h1.classList.remove("to-left");
+    nav.classList.remove("to-right");
+  } else {
+    showDarkBackground();
+    burger.classList.add("rotated90");
+    h1.classList.add("to-left");
+    nav.classList.add("to-right");
+  }
+  menuOpened = !menuOpened;
+}
+
+function hideDarkBackground(){
+  if(!headerBackground.classList.contains("transparent")) {
+    headerBackground.classList.add("transparent");
+  }
+}
+
+function showDarkBackground(){
+  if(headerBackground.classList.contains("transparent")) {
+    headerBackground.classList.remove("transparent");
+  }
+}
+
+burger.addEventListener("click", drawMenu);
+headerBackground.addEventListener("click", drawMenu);
+
+window.addEventListener("resize", () => {
+  if(document.documentElement.clientWidth >= 768) {
+    drawMenu();
+  }
+});
+
+menuLinks.forEach(link => link.addEventListener("click", e => {
+  if(document.documentElement.clientWidth < 768) {
+    setTimeout(drawMenu, 1100);
+  }
+}));
 
 
 /* SLIDER */
@@ -176,10 +229,22 @@ portfolioPic.forEach(image => image.addEventListener("click", (event) => {
 
 const button = document.querySelector("form button");
 const modal = document.querySelector(".modal");
-const modalBackground = document.querySelector(".modal__background");
 const modalMessage = document.querySelector(".modal__message");
 
-//Add Close button to modal window
+// Add dark background
+function darkenContent(node, onClickCallback = false){
+  if(node.querySelector(".dark-background") === null) {
+    let background = document.createElement("div");
+    background.classList.add("dark-background");
+    node.append(background);
+    if (onClickCallback) {
+      node.querySelector(".dark-background").addEventListener("click", onClickCallback);
+    }
+  }
+  return node;
+}
+
+// Add Close button to modal window
 function addCloseButton(node){
   node.innerHTML += "<button class='modal__close-button' type='button'>OK</button>";
   const modalCloseButton = document.querySelector(".modal__close-button");
@@ -187,30 +252,30 @@ function addCloseButton(node){
   return node;
 }
 
-//Get value from form field
+// Get value from form field
 function addNodeValue (node, defaultValue = "Не заполнено") {
   let value = document.querySelector(node).value;
   value = (value == "") ? defaultValue : value;
   return value;
 }
 
-//Show modal window
+// Show modal window
 function showModal () {
   modal.classList.remove("hidden");
 }
 
-//Hide modal window
+// Hide modal window
 function hideModal () {
   modal.classList.add("hidden");
   document.forms[0].reset();
 }
 
-//Create content of modal window
+// Create content of modal window
 button.addEventListener("click", (event) => {
   let requiredFields = [...document.querySelectorAll("[required]")];
   let isValid = node => node.checkValidity();
 
-  //Check if all required fields filled with valid data
+  // Check if all required fields filled with valid data
   if ( requiredFields.every(isValid) ) {
     event.preventDefault();
 
@@ -223,9 +288,7 @@ button.addEventListener("click", (event) => {
     description.innerText = "Описание: " + addNodeValue("textarea[name='message']", "Без Описания");
     modalMessage.append(title, subject, description);
     addCloseButton(modalMessage);
+    darkenContent(modal, hideModal);
     showModal();
   }
 });
-
-// Add close action to modal window background
-modalBackground.addEventListener("click", hideModal);
