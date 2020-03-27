@@ -289,6 +289,10 @@ button.addEventListener("click", (event) => {
     modalMessage.append(title, subject, description);
     addCloseButton(modalMessage);
     darkenContent(modal, hideModal);
+    const modalBackground = modal.querySelector(".dark-background");
+    if (!modalBackground.classList.contains("height100percents")) {
+      modalBackground.classList.add("height100percents");
+    }
     showModal();
   }
 });

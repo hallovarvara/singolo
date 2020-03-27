@@ -1162,6 +1162,10 @@ form button,
   cursor: pointer;
 }
 
+.height100percents {
+  height: 100%;
+}
+
 .transparent {
   pointer-events: none;
   opacity: 0;
