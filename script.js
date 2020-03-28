@@ -185,6 +185,8 @@ arrow.forEach( each => each.addEventListener("click", event => {
     changeSlideBackground();
     showSlide("from-right");
   }
+  each.setAttribute("disabled", true);
+  setTimeout(function(){each.removeAttribute("disabled")}, 500);
 }));
 
 

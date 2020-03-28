@@ -892,7 +892,9 @@ nav a.current {
   transition: all 0.3s ease-in-out;
 }
 
-.bordered {
+.bordered,
+.bordered:hover,
+.portfolio__picture.bordered:hover {
   outline: 5px solid var(--primary);
 }
 
