@@ -237,7 +237,6 @@ h2 {
 
 h3 {
   font-size: 18px;
-  letter-spacing: -0.01em;
   line-height: 0.8em;
 }
 
@@ -250,7 +249,6 @@ p {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: -0.012em;
 
   color: var(--secondary-light);
 }
@@ -313,7 +311,6 @@ footer {
 
   font-weight: normal;
   font-size: 12px;
-  letter-spacing: -0.005em;
   line-height: 1.84em;
 }
 
@@ -817,10 +814,6 @@ nav a.current {
   letter-spacing: 0;
 }
 
-.service:nth-child(5) h3 {
-  letter-spacing: -0.023em;
-}
-
 
 
 .portfolio {
@@ -1304,6 +1297,10 @@ footer .wrapper {
     margin: 26px 43px 26px 10px;
   }
 
+  .service:nth-child(2n + 2) p {
+    letter-spacing: 0.01em;
+  }
+
   .portfolio {
     padding-bottom: 56px;
   }
@@ -1387,7 +1384,6 @@ footer .wrapper {
   }
 
   .contact-form h3 {
-    letter-spacing: 0.005em;
     padding-top: 1px;
   }
 
@@ -1614,6 +1610,7 @@ footer .wrapper {
 
   .about__employee p {
     margin-top: 0;
+    letter-spacing: 0;
   }
 
   .contact {
