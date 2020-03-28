@@ -1324,7 +1324,9 @@ footer .wrapper {
 
   .about {
     padding-top: 53px;
-    padding-bottom: 50px;
+    padding-bottom: 56px;
+
+    border: none;
   }
 
   .about__employees {
@@ -1548,7 +1550,9 @@ footer .wrapper {
 
   .portfolio {
     padding-top: 43px;
-    padding-bottom: 23px;
+    padding-bottom: 29px;
+
+    border: none;
   }
 
   .portfolio .wrapper {
@@ -1581,7 +1585,7 @@ footer .wrapper {
 
   .about {
     padding-top: 34px;
-    padding-bottom: 20px;
+    padding-bottom: 26px;
   }
 
   .about .wrapper {
@@ -1615,7 +1619,9 @@ footer .wrapper {
 
   .contact {
     padding-top: 45px;
-    padding-bottom: 34px;
+    padding-bottom: 40px;
+
+    border: none;
   }
 
   .contact .wrapper {
